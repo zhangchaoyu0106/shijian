@@ -9,12 +9,7 @@ from odf import opendocument
 from odf.element import Element
 
 
-STUDENT_JSON = {
-    "name": "str",
-    "surname": "str",
-    "patronymic": "str | None",
-    "group": "str"
-}
+
 
 
 REPORT_JSON = {
@@ -40,8 +35,8 @@ def remove_file_if_exists(file_path: str) -> None:
 
 
 def write_document_struct(element: Element, level=0) -> None:
-   
-        file.write('  ' * level + f"{element.tagName}\n")
+    with open(file='../document_structure.txt', mode='a', encoding='utf-8') as file:
+    file.write('  ' * level + f"{element.tagName}\n")
 
     for child in element.childNodes:
         if isinstance(child, Element):
