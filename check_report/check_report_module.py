@@ -40,7 +40,7 @@ def remove_file_if_exists(file_path: str) -> None:
 
 
 def write_document_struct(element: Element, level=0) -> None:
-    with open(file='../document_structure.txt', mode='a', encoding='utf-8') as file:
+   
         file.write('  ' * level + f"{element.tagName}\n")
 
     for child in element.childNodes:
