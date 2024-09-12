@@ -8,12 +8,6 @@ from datetime import datetime
 from odf import opendocument
 from odf.element import Element
 
-STUDENT_JSON = {
-    "name": "str",
-    "surname": "str",
-    "patronymic": "str | None",
-    "group": "str"
-}
 
 
 
